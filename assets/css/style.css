@@ -238,11 +238,7 @@ footer a {
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-@media screen and (max-width: 980px) {
-  header a {
-    color: blue;
-  }
-  
+@media screen and (max-width: 980px) {  
   header {
     padding-bottom: 0;
     justify-content: center;
@@ -299,10 +295,6 @@ footer a {
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
-  header a {
-    color: red;
-  }
-
   section {
     padding: 30px 15px;
   }
@@ -332,11 +324,6 @@ footer a {
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
-  header a {
-    text-decoration: none;
-    color: green;
-  }
-
   .section-title {
     width: 95%;
   }
