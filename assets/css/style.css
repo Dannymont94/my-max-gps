@@ -20,8 +20,6 @@ header {
   padding: 20px 80px;
   background-color: var(--tertiary-color);
   display: block;
-  /* justify-content: space-between;
-  flex-wrap: wrap; */
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -106,6 +104,7 @@ section {
   color:var(--tertiary-color);
   font-size: 18px;
   line-height: 1.2;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .hero-cta h2 {
@@ -125,7 +124,7 @@ section {
   display: flex;
 }
 
-.even-section {
+section:nth-child(even) {
   background-color: var(--primary-color);
 }
 
@@ -173,6 +172,19 @@ section {
   font-size: 20px;
   margin: 0 auto;
   text-align: center;
+}
+
+.learnMore {
+  background-color:var(--secondary-color);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 .step {
