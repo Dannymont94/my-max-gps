@@ -11,6 +11,7 @@
 }
 
 body {
+  overflow-x: hidden;
   color: var(--tertiary-color);
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -238,18 +239,11 @@ footer a {
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-@media screen and (max-width: 980px) {  
+@media screen and (max-width: 1024px) {  
   header {
     padding-bottom: 0;
     justify-content: center;
-    position: relative;
-  }
-
-  #what-we-do,
-  #what-you-do,
-  #your-trainers,
-  #service-plans {
-    top: 0px;
+    position: sticky;
   }
 
   header h1 {
@@ -322,8 +316,13 @@ footer a {
   }
 }
 
-/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+/* MEDIA QUERY FOR LANDSCAPE MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
+  header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .section-title {
     width: 95%;
   }
