@@ -16,17 +16,18 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+.mobile-view-m,
+.mobile-view-s {
+  display: none;
+}
+
 header {
   padding: 20px 80px;
-  background-color: var(--tertiary-color);
+  background-color: var(--secondary-color);
   display: block;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-image: url("../images/hero-bg.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: 80%;
   z-index: 9999;
 }
 
@@ -86,21 +87,17 @@ section {
 }
 
 .hero {
+  height: 600px;
   background-image: url("../images/hero-bg.jpg");
   background-size: cover;
   background-position: center;
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  align-items: flex-start;
-  background-attachment: fixed;
-  background-position: 80%;
+  text-align: right;
 }
 
 .hero-cta {
+  float: right;
   width: 35%;
-  text-align: right;
-  margin: 3.5%;
+  text-align: left;
   color:var(--tertiary-color);
   font-size: 18px;
   line-height: 1.2;
@@ -124,7 +121,7 @@ section {
   display: flex;
 }
 
-section:nth-child(even) {
+.snippet:nth-child(even) {
   background-color: var(--primary-color);
 }
 
@@ -295,6 +292,10 @@ footer a {
     text-align: center;
   }
 
+  .hero-video {
+    text-align: right;
+  }
+
   .section-title {
     width: 80%;
   }
@@ -306,6 +307,11 @@ footer a {
   .contact-info iframe {
     flex: 1 100%;
   }
+}
+
+/* MEDIA QUERY FOR NAV HAMBURGER MENU */
+@media screen and (max-width: 880px) {
+  
 }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
@@ -339,6 +345,10 @@ footer a {
 
 /* MEDIA QUERY FOR LANDSCAPE MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
+  .mobile-view-m {
+    display: block;
+  }
+
   header {
     padding-left: 0;
     padding-right: 0;
@@ -348,7 +358,39 @@ footer a {
     width: 95%;
   }
 
+  .hero {
+    background-position: right;
+  }
+
+  .hero-video {
+    text-align: center;
+  }
+
   .intro p {
     width: 100%;
+  }
+}
+
+/* MEDIA QUERY FOR MEDIUM MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 485px) {
+  header h1 {
+    font-size: 32px;
+  }
+  .mobile-view-m {
+    display: none;
+  }
+  .mobile-view-s {
+    display: block;
+  }
+}
+
+/* MEDIA QUERY FOR SMALL MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 340px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  .mobile-view-s {
+    display: block;
   }
 }
