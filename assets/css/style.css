@@ -2,6 +2,8 @@
   --primary-color: #fce138;
   --secondary-color: #024e76;
   --tertiary-color: #39a6b2;
+  --primary-font: 'Rubik', sans-serif;
+  --secondary-font: 'Karla', sans-serif;
 }
 
 * {
@@ -13,7 +15,7 @@
 body {
   overflow-x: hidden;
   color: var(--tertiary-color);
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: var(--primary-font);
 }
 
 .mobile-view-m,
@@ -87,6 +89,7 @@ section {
 }
 
 .hero {
+  display: flex;
   height: 600px;
   background-image: url("../images/hero-bg.jpg");
   background-size: cover;
@@ -94,10 +97,14 @@ section {
   text-align: right;
 }
 
+.left-half {
+  flex: 1;
+}
+
 .hero-cta {
-  float: right;
-  width: 35%;
-  text-align: left;
+  flex: 1;
+  width: 100%;
+  text-align: center;
   color:var(--tertiary-color);
   font-size: 18px;
   line-height: 1.2;
@@ -111,10 +118,14 @@ section {
   text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-.hero-video {
-  width: 40%;
-  margin: 3.5%;
+.hero-video-container {
+  margin-top: 40px;
   border-radius: 15px;
+}
+
+.hero-video {
+  height: 350px;
+  width: 600px;
 }
 
 .flex-row {
@@ -168,10 +179,15 @@ section {
   width: 70%;
   font-size: 20px;
   margin: 0 auto;
+  text-align: justify;
+  font-family: var(--secondary-font);
+}
+
+.button-container {
   text-align: center;
 }
 
-.learnMore {
+.learn-more {
   background-color:var(--secondary-color);
   border: none;
   color: white;
@@ -238,7 +254,7 @@ section {
 footer {
   background: var(--secondary-color);
   width: 100%;
-  padding: 40px 35px;
+  padding: 10px 35px;
   text-align: right;
 }
 
@@ -366,6 +382,10 @@ footer a {
     text-align: center;
   }
 
+  .section-text {
+    text-align: left;
+  }
+
   .intro p {
     width: 100%;
   }
@@ -376,11 +396,8 @@ footer a {
   header h1 {
     font-size: 32px;
   }
-  .mobile-view-m {
-    display: none;
-  }
-  .mobile-view-s {
-    display: block;
+  .section-text {
+    width: 90%;
   }
 }
 
