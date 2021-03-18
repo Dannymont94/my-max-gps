@@ -2,6 +2,7 @@
   --primary-color: #fce138;
   --secondary-color: #024e76;
   --tertiary-color: #39a6b2;
+  --header-color: rgba(2, 115, 146, 0.7);
   --primary-font: 'Rubik', sans-serif;
   --secondary-font: 'Karla', sans-serif;
 }
@@ -20,7 +21,7 @@ body {
 
 header {
   padding: 20px 80px;
-  background-color: var(--secondary-color);
+  background-color: var(--header-color);
   display: block;
   position: -webkit-sticky;
   position: sticky;
@@ -93,6 +94,34 @@ section,
   text-align: right;
 }
 
+.image-break {
+  height: 600px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.parallax-1 {
+  background-image: url("../images/parallax-1.jpg");
+  background-position: bottom;
+  background-size: cover;
+}
+
+.parallax-2 {
+  background-image: url("../images/parallax-2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.parallax-3 {
+  background-image: url("../images/parallax-3.jpg");
+  background-size: cover;
+}
+
+.parallax-4 {
+  background-image: url("../images/parallax-4.jpg");
+  background-size: cover;
+}
+
 .left-half {
   flex: 1;
 }
@@ -122,7 +151,7 @@ section,
 }
 
 .hero-video {
-  width: 45%;
+  width: 35%;
   height: 300px;
 }
 
@@ -365,8 +394,9 @@ footer {
 
 footer h2 {
   color: var(--primary-color);
-  font-size: 20px;
+  font-size: 14px;
   margin: 0;
+  font-weight: normal;
 }
 
 footer div {
@@ -376,6 +406,20 @@ footer div {
 
 footer a {
   color: var(--secondary-color);
+}
+
+/* MEDIA QUERY FOR EXTRA LARGE DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 1700px) {
+  .hero-video {
+    width: 40%;
+  }
+}
+
+/* MEDIA QUERY FOR LARGE DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 1600px) {
+  .hero-video {
+    width: 45%;
+  }
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
@@ -425,6 +469,12 @@ footer a {
   .product-bullets {
     width: 80%;
   }
+
+  .parallax-4 {
+    background-image: url("../images/parallax-4-mobile.jpg");
+    background-position: top;
+    background-size: auto;
+  }
 }
 
 /* MEDIA QUERY FOR NAV HAMBURGER MENU */
@@ -467,6 +517,11 @@ footer a {
   .secondary-title {
     font-size: 36px;
   }
+
+  .parallax-3 {
+    background-image: url("../images/parallax-3-mobile.jpg");
+    background-position: center;
+  }
 }
 
 /* MEDIA QUERY FOR LANDSCAPE MOBILE PHONES AND SMALLER */
@@ -508,13 +563,24 @@ footer a {
   header h1 {
     font-size: 32px;
   }
+
   .section-text,
   .product-bullets {
     width: 90%;
   }
+
   .section-video iframe {
     width: 600px;
     height: 200px;
+  }
+
+  .parallax-1 {
+    background-size: auto;
+  }
+
+  .parallax-2 {
+    background-image: url("../images/parallax-2-mobile.jpg");
+    background-position: center;
   }
 }
 
@@ -523,4 +589,9 @@ footer a {
   header h1 {
     font-size: 28px;
   }
+
+  .parallax-1 {
+    background-position: top;
+  }
 }
+/* parallax 4 needs rework at 1024px */
