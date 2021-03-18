@@ -318,7 +318,7 @@ section,
   list-style: none;
   margin: 0;
   padding: 0;
-  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
   position: relative;
 }
 
@@ -384,28 +384,18 @@ section,
   margin: 0;
 }
 
-
-footer {
+.page-footer {
   background: var(--secondary-color);
   width: 100%;
   padding: 10px 35px;
   text-align: right;
 }
 
-footer h2 {
+.page-footer h2 {
   color: var(--primary-color);
   font-size: 14px;
   margin: 0;
   font-weight: normal;
-}
-
-footer div {
-  line-height: 1.5;
-  text-align: right;
-}
-
-footer a {
-  color: var(--secondary-color);
 }
 
 /* MEDIA QUERY FOR EXTRA LARGE DESKTOP SCREENS AND SMALLER */
@@ -478,9 +468,9 @@ footer a {
 }
 
 /* MEDIA QUERY FOR NAV HAMBURGER MENU */
-@media screen and (max-width: 880px) {
-  
-}
+/* @media screen and (max-width: 880px) {
+     
+} */
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
@@ -567,6 +557,7 @@ footer a {
   .section-text,
   .product-bullets {
     width: 90%;
+    font-size: 16px;
   }
 
   .section-video iframe {
@@ -594,4 +585,3 @@ footer a {
     background-position: top;
   }
 }
-/* parallax 4 needs rework at 1024px */
