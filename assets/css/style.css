@@ -122,6 +122,11 @@ section,
   background-size: cover;
 }
 
+.parallax-5 {
+  background-image: url("../images/science-bg-2.jpg");
+  background-size: cover;
+}
+
 .left-half {
   flex: 1;
 }
@@ -228,7 +233,7 @@ section,
   height: 400px;
 }
 
-.testimonial-video iframe {
+.row-video iframe {
   margin-bottom: 15px;
   width: 400px;
   height: 300px;
