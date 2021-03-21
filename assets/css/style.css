@@ -96,13 +96,13 @@ section,
 
 .image-break {
   height: 600px;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
 .parallax-1 {
   background-image: url("../images/parallax-1.jpg");
-  background-position: scroll;
+  background-position: bottom;
   background-size: cover;
 }
 
@@ -124,6 +124,7 @@ section,
 
 .parallax-5 {
   background-image: url("../images/science-bg-2.jpg");
+  background-size: cover;
 }
 
 .left-half {
