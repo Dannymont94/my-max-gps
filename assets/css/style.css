@@ -465,6 +465,10 @@ section,
     width: 80%;
   }
 
+  .image-break {
+    background-attachment: scroll;
+  }
+
   .parallax-4 {
     background-image: url("../images/parallax-4-mobile.jpg");
     background-position: top;
