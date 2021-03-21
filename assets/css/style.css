@@ -2,6 +2,7 @@
   --primary-color: #fce138;
   --secondary-color: #024e76;
   --tertiary-color: #39a6b2;
+  --cellgevity-color: #008AAB;
   --header-color: rgba(2, 115, 146, 0.7);
   --primary-font: 'Rubik', sans-serif;
   --secondary-font: 'Karla', sans-serif;
@@ -175,7 +176,7 @@ section,
 
 .section-title {
   font-size: 48px;
-  color: var(--secondary-color);
+  color: var(--cellgevity-color);
   border-bottom: 3px solid;
   padding-bottom: 20px;
   text-align: center;
@@ -185,10 +186,6 @@ section,
 
 .primary-border {
   border-color: var(--primary-color);
-}
-
-.secondary-border {
-  border-color: var(--tertiary-color);
 }
 
 .content {
@@ -390,7 +387,7 @@ section,
 }
 
 .page-footer {
-  background: var(--secondary-color);
+  background: var(--tertiary-color);
   width: 100%;
   padding: 10px 35px;
   text-align: right;
