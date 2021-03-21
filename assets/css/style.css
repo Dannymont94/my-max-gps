@@ -124,7 +124,13 @@ section,
 }
 
 .parallax-5 {
-  background-image: url("../images/science-bg-2.jpg");
+  background-image: url("../images/parallax-5.jpg");
+  background-size: cover;
+}
+
+.parallax-6 {
+  background-image: url("../images/parallax-6.jpg");
+  background-position:center;
   background-size: cover;
 }
 
@@ -184,6 +190,10 @@ section,
   width: 50%;
 }
 
+.secondary-title {
+  font-size: 30px;
+}
+
 .primary-border {
   border-color: var(--primary-color);
 }
@@ -216,6 +226,15 @@ section,
 .product-bullets {
   margin-top: 20px;
   padding-left: 20px;
+}
+
+.section-img-container {
+  text-align: center;
+}
+
+.section-img {
+  width: 55%;
+  text-align: center;
 }
 
 .section-video {
@@ -462,6 +481,10 @@ section,
     width: 80%;
   }
 
+  .section-img {
+    width: 100%;
+  }
+
   .image-break {
     background-attachment: scroll;
   }
@@ -474,7 +497,7 @@ section,
 }
 
 /* MEDIA QUERY FOR NAV HAMBURGER MENU */
-/* @media screen and (max-width: 880px) {
+/* @media screen and (max-width: 900px) {
      
 } */
 
@@ -511,7 +534,7 @@ section,
   }
 
   .secondary-title {
-    font-size: 36px;
+    font-size: 30px;
   }
 
   .parallax-3 {
@@ -558,6 +581,10 @@ section,
 @media screen and (max-width: 485px) {
   header h1 {
     font-size: 32px;
+  }
+
+  .section-title {
+    padding-bottom: 5px;
   }
 
   .section-text,
