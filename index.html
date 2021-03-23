@@ -13,11 +13,28 @@
 <body>
   <!-- Header section -->
   <header>
+    <span class="checkbox-container">
+      <input class="checkbox-trigger" type="checkbox"  />
+      <span class="menu-content">
+          <ul>
+            <a href="./science.html"><li>Ciencia</li></a>
+            <hr>
+            <a href="./opportunity.html"><li>Oportunidad</li></a>
+            <hr>
+            <a href="./testimonials.html"><li>Testimonios</li></a>
+            <hr>
+            <a href="./products.html"><li>Productos</li></a>
+            <hr>
+            <a href="#steps" class="smoothScroll"><li>Proximos Pasos</li></a>
+          </ul>
+        <span class="hamburger-menu"></span>
+      </span>
+    </span>
     <h1>
       <a href="#intro" class="smoothScroll">La Experiencia Max</a>
     </h1>
     <!-- Nav section -->
-    <nav>
+    <nav class="large-nav">
       <ul>
         <li>
           <a href="./science.html">Ciencia</a>
@@ -39,7 +56,10 @@
   </header>
 
   <!-- Hero section -->
-  <section id="intro" class="hero">
+  <section class="hero">
+    <div id="intro">
+      <!-- Nav targets this div -->
+    </div>
     <!-- Call To Action -->
     <div class="hero-cta">
       <h2>Descubra la Experiencia</h2>

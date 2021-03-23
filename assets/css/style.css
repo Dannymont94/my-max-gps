@@ -44,11 +44,125 @@ header a {
   color: var(--primary-color);
 }
 
-header nav {
+.checkbox-container {
+  display: none;
+  float: left;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.menu-content {
+  display: flex;
+  background: var(--cellgevity-color);
+  color: white;
+  float: left;
+}
+
+.menu-content ul {
+  display: block;
+  padding-left: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin: 0;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s ease 0.7s, width 0.7s ease;
+}
+
+.menu-content ul a {
+  height: 100%;
+  width: 100%;
+}
+
+.menu-content ul li {
+  padding-left: 15px;
+  list-style: none;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  cursor: pointer;
+}
+
+.menu-content ul li:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.checkbox-trigger {
+  opacity: 0;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 0px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.hamburger-menu, .hamburger-menu::before, .hamburger-menu::after {
+  display: block;
+  position: absolute;
+  background: white;
+  width: 40px;
+  height: 4px;
+  margin: 1.3em 3em;
+  transition: background 0.3s;
+}
+
+.hamburger-menu::before, .hamburger-menu::after {
+  content: '';
+  position: absolute;
+  margin: -0.7em 0 0;
+  transition: width 0.7s ease 0.3s, transform 0.7s ease 0.3s;
+}
+
+.hamburger-menu::after {
+  margin-top: 0.7em; 
+}
+
+.hamburger-menu {
+  position: relative;
+  display: block;
+  margin: 0;
+  margin-top: 1.45em;
+  margin-right: 0.35em;
+  margin-left: 0.35em;
+  margin-bottom: 1.45em;
+  transition: width 0.3s ease;
+}
+
+.checkbox-trigger:checked {
+  left: 302px;
+}
+
+.checkbox-trigger:checked + .menu-content .hamburger-menu {
+  width: 2em;
+  transition: width 0.7s ease 0.7s;
+}
+
+.checkbox-trigger:checked + .menu-content .hamburger-menu::before {
+  width: 1.2em;
+  transform: rotate(-35deg);
+  margin-top: -0.4em;
+}
+
+.checkbox-trigger:checked + .menu-content .hamburger-menu::after {
+  width: 1.2em;
+  transform: rotate(35deg);
+  margin-top: 0.4em;
+}
+
+.checkbox-trigger:checked + .menu-content ul {
+  width: 300px;
+  height: 300px;
+  transition: width 0.7s ease 0.3s, height 0.3s ease;
+}
+
+.large-nav {
   margin: 7px 0;
 }
 
-header nav ul {
+.large-nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -56,7 +170,7 @@ header nav ul {
   list-style: none;
 }
 
-header nav ul li a {
+.large-nav ul li a {
   margin: 0 5px;
   padding: 10px 15px;
   font-weight: lighter;
@@ -65,15 +179,15 @@ header nav ul li a {
   transition: background-color 0.4s ease-out, color 0.4s ease-out, border-radius 0.4s ease-out, text-shadow 0.4s ease-out;
 }
 
-header nav ul li:first-child a {
+.large-nav ul li:first-child a {
   margin-left: 0;
 }
 
-header nav ul li:last-child a {
+.large-nav ul li:last-child a {
   margin-right: 0;
 }
 
-header nav ul li a:hover,
+.large-nav ul li a:hover,
 .active {
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -204,6 +318,7 @@ section,
   position: relative;
 }
 
+#intro,
 #science,
 #opportunity,
 #testimonials,
@@ -471,8 +586,14 @@ cite {
   }
 }
 
+@media screen and (max-width: 1055px) {
+  .large-nav ul li a {
+    font-size: 20px;
+  }
+}
+
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-@media screen and (max-width: 1024px) {  
+@media screen and (max-width: 1024px) {
   header {
     justify-content: center;
     position: sticky;
@@ -483,13 +604,13 @@ cite {
     text-align: center;
   }
 
-  header nav ul {
+  .large-nav ul {
     margin-top: 20px;
     width: 100%;
     justify-content: center;
   }
 
-  header nav ul li a {
+  .large-nav ul li a {
     font-size: 20px;
   }
 
@@ -535,9 +656,42 @@ cite {
 }
 
 /* MEDIA QUERY FOR NAV HAMBURGER MENU */
-/* @media screen and (max-width: 900px) {
-     
-} */
+@media screen and (max-width: 900px) {
+  header {
+    background-color: var(--cellgevity-color);
+    padding-left: 0;
+    justify-content: center;
+    position: sticky;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .large-nav {
+    display: none;
+  }
+
+  .checkbox-container {
+    display: block;
+  }
+
+  #intro,
+  #science,
+  #opportunity,
+  #testimonials,
+  #products,
+  #steps {
+    content: "";
+    position: absolute;
+    top: -90px;
+  }
+
+  .page-footer {
+    background-color: var(--secondary-color);
+  }
+}
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
