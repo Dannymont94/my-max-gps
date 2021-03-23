@@ -167,8 +167,10 @@ section,
   height: 300px;
 }
 
-.flex-row {
+.quote-flex-row {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .snippet:nth-child(even) {
@@ -272,6 +274,12 @@ section,
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+.learn-more:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .step {
@@ -378,13 +386,19 @@ section,
   width: 300px;
   height: 400px;
   padding: 20px;
-  border: #024e76 1px solid;
   margin: 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
+  transition: background-color 0.2s ease-out;
   justify-content: flex-end;
+  background: linear-gradient(white, white) padding-box, var(--cellgevity-color) border-box;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px black;
+}
+
+.card:hover {
+  background: linear-gradient(white, white) padding-box, var(--primary-color) border-box;
 }
 
 .card img {
@@ -403,6 +417,30 @@ section,
   font-size: 18px;
   font-weight: normal;
   margin: 0;
+}
+
+blockquote {
+  margin: 15px;
+  min-width: 300px;
+  padding: 20px;
+  background: linear-gradient(white, white) padding-box, url("../images/quote-background.jpg") border-box  0 / cover;
+  border: 5px solid transparent;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px black;
+  font-size: 20px;
+  font-style: oblique;
+  line-height: 1.5;
+  width: 40%;
+}
+
+footer {
+  padding-top: 20px;
+}
+
+cite {
+  font-style: normal;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .page-footer {
