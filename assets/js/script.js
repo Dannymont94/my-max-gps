@@ -1,3 +1,13 @@
+const titleEl = document.querySelector('h1 a');
+const hamburgerMenuEl = document.querySelectorAll('.menu-content ul li');
+const hamburgerCheckboxEl = document.querySelector('.checkbox-trigger');
+
+function closeHamburgerMenu() {
+  if (hamburgerCheckboxEl.checked == true) {
+    hamburgerCheckboxEl.checked = false;
+  }
+}
+
 $(function() {
   // This will select everything with the class smoothScroll
   // This should prevent problems with carousel, scrollspy, etc...
@@ -13,4 +23,10 @@ $(function() {
       }
     }
   });
+});
+
+titleEl.addEventListener('click', closeHamburgerMenu);
+
+hamburgerMenuEl.forEach(element => {
+  element.addEventListener('click', closeHamburgerMenu);
 });
