@@ -688,7 +688,11 @@ cite {
   }
 
   .page-footer {
-    background-color: #24719b;
+    background-color: #F4F6F9;
+  }
+
+  .page-footer h2 {
+    color: var(--secondary-color);
   }
 }
 
