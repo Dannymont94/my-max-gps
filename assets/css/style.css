@@ -558,7 +558,7 @@ cite {
 }
 
 .page-footer {
-  background: var(--tertiary-color);
+  background: var(--cellgevity-color);
   width: 100%;
   padding: 10px 35px;
   text-align: right;
@@ -688,7 +688,7 @@ cite {
   }
 
   .page-footer {
-    background-color: var(--secondary-color);
+    background-color: #24719b;
   }
 }
 
